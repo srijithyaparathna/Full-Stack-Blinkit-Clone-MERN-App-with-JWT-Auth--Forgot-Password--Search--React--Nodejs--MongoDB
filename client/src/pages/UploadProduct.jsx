@@ -483,7 +483,34 @@ The component imports various UI components and utility functions
 
   Step 5: Additional product details
     Users can add custom fields using the AddFieldComponent popup
-    
+    The handleAddField function adds new key-value pairs to more_details
+
+  Step 6: Form Submission
+     handleSubmit sends the product data to the backend using an Axios an Axios request
+     if the request is successfull, seccessAlert is shown and the form resets
+     if an error occurs, AxiosToastError is displayed error messages
+     
+  
+3 Redux integration
+  Redux is used to fetch categories and subcategories
+
+     Fetching Data from Redux 
+        useSelector(state => state.product.allCategory): Retrieves all available product categories.
+        useSelector(state => state.product.allSubCategory): Retrieves all available subcategories.
+
+    Using Redux Data
+        the dropdowns for selecting categories and subcategories use the Redux state.
+        When a user selects a category, it is added to the product data.
+  
+  Summary of Component Functionality
+        Displays a form for entering product details.
+        Allows image uploads and previews.
+        Supports category and subcategory selection.
+        Enables adding custom fields dynamically.
+        Submits product data via an API call.
+        Uses Redux for managing category and subcategory data.
+        Shows success or error alerts based on the response.
+
 
 
 
